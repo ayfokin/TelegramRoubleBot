@@ -116,7 +116,8 @@ public class Bot extends TelegramLongPollingBot {
             logger.debug("Received result message");
             sendMessage(chatId, answer);
             logger.info("Send answer");
-        } else {
+        }
+        if (update.getMessage().isUserMessage()) {
             sendMessage(chatId, Messages.typeText());
             logger.info("Send typeText message");
         }

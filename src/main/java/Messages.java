@@ -24,7 +24,7 @@ public abstract class Messages {
     }
 
     public static String dateError() {
-        return "Беды с датой, пожалуйста, введите ее в формате дд.мм.гггг";
+        return "Беды с датой, пожалуйста, введите существующую дату в формате дд.мм.гггг";
     }
 
     public static String wrongDate() {

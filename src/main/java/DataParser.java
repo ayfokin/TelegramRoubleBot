@@ -48,11 +48,13 @@ public abstract class DataParser {
         try {
             Date date = formatter.parse(text);
             Date now = new Date();
-            logger.debug("Date parsed");
             if (date.after(now)) {
                 return "1";
             }
-            return formatter.format(date);
+            if (text.equals(formatter.format(date))) {
+                return formatter.format(date);
+            }
+            return "0";
         } catch (ParseException e) {
             logger.warn("Cant parse date" + e);
         }
