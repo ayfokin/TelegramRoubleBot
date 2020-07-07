@@ -177,3 +177,20 @@
 2020-07-07 14:11:34,866 DEBUG Bot [rouble_rate_bot Telegram Executor] Received link https://bankiros.ru/currency/cbrf/date
 2020-07-07 14:11:34,869 DEBUG Bot [rouble_rate_bot Telegram Executor] Received date 0
 2020-07-07 14:11:35,330 INFO Bot [rouble_rate_bot Telegram Executor] Send dateError message
+2020-07-07 14:56:47,058 INFO Bot [main] Data initialized
+2020-07-07 14:56:48,279 INFO Bot [main] Bot connected
+2020-07-07 14:56:59,523 INFO Bot [rouble_rate_bot Telegram Executor] Update received
+2020-07-07 14:56:59,524 DEBUG Bot [rouble_rate_bot Telegram Executor] Received text: 29.02.2019 цб
+2020-07-07 14:56:59,525 DEBUG Bot [rouble_rate_bot Telegram Executor] Received city Цб
+2020-07-07 14:56:59,526 DEBUG Bot [rouble_rate_bot Telegram Executor] Received link https://bankiros.ru/currency/cbrf/date
+2020-07-07 14:56:59,527 DEBUG Bot [rouble_rate_bot Telegram Executor] Received date 0
+2020-07-07 14:56:59,831 INFO Bot [rouble_rate_bot Telegram Executor] Send dateError message
+2020-07-07 14:57:07,161 INFO Bot [rouble_rate_bot Telegram Executor] Update received
+2020-07-07 14:57:07,162 DEBUG Bot [rouble_rate_bot Telegram Executor] Received text: 28.02.2019 цб
+2020-07-07 14:57:07,164 DEBUG Bot [rouble_rate_bot Telegram Executor] Received city Цб
+2020-07-07 14:57:07,167 DEBUG Bot [rouble_rate_bot Telegram Executor] Received link https://bankiros.ru/currency/cbrf/date
+2020-07-07 14:57:07,168 DEBUG Bot [rouble_rate_bot Telegram Executor] Received date 28.02.2019
+2020-07-07 14:57:08,936 DEBUG HtmlParser [rouble_rate_bot Telegram Executor] Connected successfully https://bankiros.ru/currency/cbrf/date/28-02-2019
+2020-07-07 14:57:09,456 DEBUG HtmlParser [rouble_rate_bot Telegram Executor] Connected successfully https://bankiros.ru/currency/cbrf/date/28-02-2019
+2020-07-07 14:57:09,465 DEBUG Bot [rouble_rate_bot Telegram Executor] Received result message
+2020-07-07 14:57:09,714 INFO Bot [rouble_rate_bot Telegram Executor] Send answer
