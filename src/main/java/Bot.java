@@ -16,24 +16,24 @@ import java.util.HashMap;
 
 public class Bot extends TelegramLongPollingBot {
     private static final Logger logger = LogManager.getLogger();
-    private static final String TOKEN = "1033878851:AAEtL2naAyKpVu6YXEB_fTx5fit0e23TGg4";
-    private static final String USERNAME = "rouble_rate_bot";
     private static final String CITY_PATH = "cities.json";
     private static final String CURRENCY_PATH = "currencies.json";
     private static final String LINK_PATH = "links.json";
+    private static final String CONFIG_PATH = "config.json";
 
     protected HashMap<?, ?> cities;
     protected HashMap<?, ?> currencies;
     protected HashMap<?, ?> links;
+    protected HashMap <? ,?> config;
 
     @Override
     public String getBotUsername() {
-        return USERNAME;
+        return DataParser.getString("USERNAME", config);
     }
 
     @Override
     public String getBotToken() {
-        return TOKEN;
+        return DataParser.getString("TOKEN", config);
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Bot extends TelegramLongPollingBot {
                 return;
             }
 
-            String city = DataParser.getCity(text, cities);
+            String city = DataParser.getString(text, cities);
             logger.debug("Received city " + city);
 
             if (city == null) {
@@ -75,7 +75,7 @@ public class Bot extends TelegramLongPollingBot {
                 return;
             }
 
-            String link = DataParser.getLink(city, links);
+            String link = DataParser.getString(city, links);
             logger.debug("Received link " + link);
 
             if (city.equals("Цб")) {
@@ -103,7 +103,7 @@ public class Bot extends TelegramLongPollingBot {
                 return;
             }
 
-            String currency = DataParser.getCurrency(text, currencies);
+            String currency = DataParser.getString(text, currencies);
             logger.debug("Received currency " + currency);
 
             if (currency == null) {
@@ -150,6 +150,11 @@ public class Bot extends TelegramLongPollingBot {
             links = getMap(LINK_PATH);
         } catch (IOException e){
             logger.error("Failed initialized HashMap links\nError message:", e);
+        }
+        try {
+            config = getMap(CONFIG_PATH);
+        } catch (IOException e) {
+            logger.error("Failed initialized HashMap config\nError message:", e);
         }
     }
 

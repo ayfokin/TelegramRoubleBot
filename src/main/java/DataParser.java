@@ -11,19 +11,7 @@ import java.util.regex.Pattern;
 public abstract class DataParser {
     private static final Logger logger = LogManager.getLogger();
 
-    public static String getCity(String text, HashMap<?, ?> data) {
-        return getString(text, data);
-    }
-
-    public static String getCurrency(String text, HashMap<?, ?> data) {
-        return getString(text, data);
-    }
-
-    public static String getLink(String text, HashMap<?, ?> data) {
-        return getString(text, data);
-    }
-
-    private static String getString(String text, HashMap<?, ?> data) {
+    public static String getString(String text, HashMap<?, ?> data) {
         for (HashMap.Entry<?, ?> entry : data.entrySet()) {
             Pattern pattern = Pattern.compile(entry.getKey().toString());
             Matcher matcher = pattern.matcher(text);
