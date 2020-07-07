@@ -11,7 +11,7 @@ public class DataParserTest {
     public void testCity_getString() {
         Instance.initializeData();
 
-        Assert.assertEquals("Москва", DataParser.getCity("московский", Instance.cities));
+        Assert.assertEquals("Москва", DataParser.getString("московский", Instance.cities));
         logger.debug("testCity_getString passed");
     }
 
@@ -19,7 +19,7 @@ public class DataParserTest {
     public void testCity2Words_getString() {
         Instance.initializeData();
 
-        Assert.assertEquals("Великий Новгород", DataParser.getCity("великий новгород", Instance.cities));
+        Assert.assertEquals("Великий Новгород", DataParser.getString("великий новгород", Instance.cities));
         logger.debug("testCity2Words_getString passed");
     }
 
@@ -27,7 +27,7 @@ public class DataParserTest {
     public void testCityAbbreviated_getString() {
         Instance.initializeData();
 
-        Assert.assertEquals("Санкт-Петербург", DataParser.getCity("спб", Instance.cities));
+        Assert.assertEquals("Санкт-Петербург", DataParser.getString("спб", Instance.cities));
         logger.debug("testCityAbbreviated_getString passed");
     }
 
@@ -35,7 +35,7 @@ public class DataParserTest {
     public void testCityEmpty_getString() {
         Instance.initializeData();
 
-        Assert.assertNull(DataParser.getCity("", Instance.cities));
+        Assert.assertNull(DataParser.getString("", Instance.cities));
         logger.debug("testCityEmpty_getString passed");
     }
 
@@ -43,7 +43,7 @@ public class DataParserTest {
     public void testCurrencyEur_getString() {
         Instance.initializeData();
 
-        Assert.assertEquals("eur", DataParser.getCity("евро в европе", Instance.currencies));
+        Assert.assertEquals("eur", DataParser.getString("евро в европе", Instance.currencies));
         logger.debug("testCurrencyEur_getString passed");
     }
 
@@ -51,7 +51,7 @@ public class DataParserTest {
     public void testCurrencyJpy_getString() {
         Instance.initializeData();
 
-        Assert.assertEquals("jpy", DataParser.getCity("а что насчет йен", Instance.currencies));
+        Assert.assertEquals("jpy", DataParser.getString("а что насчет йен", Instance.currencies));
         logger.debug("testCurrencyJpy_getString passed");
     }
 
@@ -59,7 +59,7 @@ public class DataParserTest {
     public void testCurrencyNo_getString() {
         Instance.initializeData();
 
-        Assert.assertNull(DataParser.getCity("европейцы", Instance.currencies));
+        Assert.assertNull(DataParser.getString("европейцы", Instance.currencies));
         logger.debug("testCurrencyNo_getString passed");
     }
 
@@ -67,7 +67,7 @@ public class DataParserTest {
     public void testCurrencyEmpty_getString() {
         Instance.initializeData();
 
-        Assert.assertNull(DataParser.getCity("", Instance.currencies));
+        Assert.assertNull(DataParser.getString("", Instance.currencies));
         logger.debug("testCurrencyNo_getString passed");
     }
 
